@@ -9,3 +9,8 @@
   ansible.builtin.shell: pwd;whoami;hostname
   args:
     executable: /bin/bash
+    
+- name: start nginx svc
+  service:
+    name: nginx
+    state: started
