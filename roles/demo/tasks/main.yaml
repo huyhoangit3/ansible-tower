@@ -4,3 +4,8 @@
     name:
       - nginx
     state: present
+
+- name: Hello
+  ansible.builtin.shell: pwd;whoami;hostname
+  args:
+    executable: /bin/bash
