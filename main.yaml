@@ -24,7 +24,7 @@
 #     - join-workers
 
 
-- hosts: "*"
+- hosts: "demo-group"
   become: true
   roles:
     - demo
