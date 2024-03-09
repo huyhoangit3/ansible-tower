@@ -12,6 +12,7 @@
     executable: /bin/bash
 
 - name: Just checking the exit code 
+  become_user: hoang
   debug:
     msg: "{{ whoami_out }}"
 
