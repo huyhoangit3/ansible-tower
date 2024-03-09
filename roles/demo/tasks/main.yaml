@@ -6,7 +6,7 @@
     state: present
 
 - name: Hello
-  ansible.builtin.shell: pwd;whoami;hostname
+  ansible.builtin.shell: whoami > whoami.txt
   args:
     executable: /bin/bash
     
