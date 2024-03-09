@@ -6,9 +6,14 @@
     state: present
 
 - name: Hello
-  ansible.builtin.shell: whoami > whoami.txt
+  shell: whoami
+  register: whoami_out
   args:
     executable: /bin/bash
+
+- name: Just checking the exit code 
+  debug:
+    msg: "{{ whoami_out }}"
 
 - name: create file
   file:
