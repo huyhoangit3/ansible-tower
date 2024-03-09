@@ -24,7 +24,7 @@
 #     - join-workers
 
 
-- hosts: "demo-inventory"
+- hosts: "*"
   become: true
   roles:
     - demo
