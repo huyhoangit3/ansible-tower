@@ -6,13 +6,13 @@
     state: present
 
 - name: Hello
+  become_user: hoang
   shell: whoami
   register: whoami_out
   args:
     executable: /bin/bash
 
 - name: Just checking the exit code 
-  become_user: hoang
   debug:
     msg: "{{ whoami_out }}"
 
