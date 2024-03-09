@@ -9,13 +9,13 @@
   ansible.builtin.shell: whoami > whoami.txt
   args:
     executable: /bin/bash
-    
-- name: start nginx svc
-  service:
-    name: nginx
-    state: started
 
 - name: create file
   file:
     path: "~/{{file_name}}.txt"
     state: "touch"
+    
+- name: start nginx svc
+  service:
+    name: nginx
+    state: started
