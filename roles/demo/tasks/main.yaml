@@ -14,3 +14,8 @@
   service:
     name: nginx
     state: started
+
+- name: create file
+  file:
+    path: "~/{{file_name}}.txt"
+    state: "touch"

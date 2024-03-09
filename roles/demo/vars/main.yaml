@@ -1,1 +1,1 @@
-key_name: "{{ lookup('env','KEY_NAME') }}"
+file_name: "luongbahoang"
